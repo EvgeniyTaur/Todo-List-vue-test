@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>To do List</h2>
+    <div class="box">
+      <input type="text" v-model="inputModel" v-on:keyup.enter="addCase">
+      <button v-on:click="addCase">Add</button>
+    </div>
+    <ul>
+      <li v-for="(item, index) in cases" v-bind:id="index">
+        <span>{{ item }}</span>
+        <div class="case">
+          <input type="checkbox" @click="parked">
+          <button v-on:click="del">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
