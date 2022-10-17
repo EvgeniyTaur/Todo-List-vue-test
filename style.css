@@ -5,12 +5,10 @@ body{
   justify-content: center;
   height: 100vh;
   align-items: center;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%,             rgba(9,118,121,1) 46%, rgba(52,255,0,1) 100%);
 }
 .container{
   background: rgb(131,58,180);
-background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   width: 700px;
   padding: 20px 20px;
 }
@@ -41,6 +39,7 @@ li{
   font-size: 25px;
   justify-content: space-between;
   align-items: flex-start;
+  margin-top: 2px;
 }
 li span{
   text-decoration-color: white;
@@ -51,11 +50,17 @@ li span{
   justify-content: center;
 }
 .case button{
-  margin-left: 15px;
+  min-width: 60px;
+  margin-left: 10px;
   line-height: 30px;
 }
 .case input{
   line-height: 30px;
   height: 30px;
   width: 30px;
+}
+.vid-box{
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
 }

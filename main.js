@@ -23,6 +23,10 @@ var app = new Vue({
       }else{
         a.style.textDecoration = "line-through"
       }
+    },
+    up(e){
+      var a = e.path[2].id;
+      this.cases.splice(a-1,a,this.cases[a],this.cases[a-1]);
     }
   }
 })
