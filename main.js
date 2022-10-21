@@ -20,13 +20,15 @@ var app = new Vue({
       var a = e.path[2].childNodes[0];
       if(a.style.textDecoration == "line-through"){
         a.style.textDecoration = "none";
+        a.style.color = "#1F3140";
       }else{
-        a.style.textDecoration = "line-through"
+        a.style.textDecoration = "line-through";
+        a.style.color = "rgba(0,0,0,.3)";
       }
     },
     up(e){
       var a = e.path[2].id;
-      this.cases.splice(a-1,a,this.cases[a],this.cases[a-1]);
+      this.cases.splice(a-1,2,this.cases[a],this.cases[a-1]);
     }
   }
 })

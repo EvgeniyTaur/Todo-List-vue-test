@@ -11,7 +11,7 @@
   <div class="container">
     <h2>To do List</h2>
     <div class="box">
-      <input type="text" v-model="inputModel" v-on:keyup.enter="addCase">
+      <input type="text" maxlength="25" v-model="inputModel" v-on:keyup.enter="addCase">
       <button v-on:click="addCase">Add</button>
     </div>
     <ul>
@@ -19,7 +19,7 @@
         <span>{{ item }}</span>
         <div class="case">
           <input type="checkbox" @click="parked">
-          <button @click="up">⇪</button>
+          <button @click="up">Up</button>
           <button v-on:click="del">Delete</button>
         </div>
       </li>
